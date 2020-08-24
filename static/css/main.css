@@ -1,0 +1,141 @@
+/* Make the maximum width of the page smaller
+for artistic purpose*/
+
+@media (min-width: 1200px) {
+    .content {
+        width: 1000px;
+        margin: auto;
+    }
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/FiraCode-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Fira Code Bold';
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/FiraCode-Bold.woff") format("woff");
+}
+
+:root {
+    --accent: #FFA86A;
+    --background: color-mod(var(--accent) blend(#1D1E28 98%));
+    --color: white;
+    --border-color: rgba(255, 255, 255, .1);
+    /* variables for js, must be the same as these in @custom-media queries */
+    --phoneWidth: (max-width: 684px);
+    --tabletWidth: (max-width: 900px);
+}
+
+body {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-color: #1D1E28;
+    color: #23B0FF;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    /* font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl"; */
+    /* font-variant-ligatures: contextual; */
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+}
+
+.content {
+    padding-bottom: 5%;
+}
+
+.footer {
+    left: 0;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+  }
+
+h1 {
+    font-size: 4em;
+    line-height: 1.3em;
+    font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+}
+
+h2 {
+    font-size: 2.5em;
+    padding-left: 2%;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+a {
+    color: inherit;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+code {
+    font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+    font-feature-settings: normal;
+    background: rgb(28, 29, 36);
+    padding: 1px 6px;
+    margin: 0 2px;
+    border-radius: 5px;
+    font-size: .95rem;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    max-width: 60%;
+}
+
+.img-footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    font-size: 0.8em;
+}
+
+/* navigation bar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+
+li a:hover {
+    background-color: #111;
+}

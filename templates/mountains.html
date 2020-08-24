@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JeroenDM: Research</title>
+    <meta name="description" content="Research Jeroen De Maeyer">
+    <meta name="author" content="Jeroen De Maeyer">
+
+    <!-- <link rel="stylesheet" href="css/main.css?v=1.0"> -->
+    <link href="{{ url_for('static', path='/css/main.css') }}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="content">
+
+        <h3>Upload a picture of Matterhorn or K2</h3>
+
+        <p>This app can do one thing only, tell the difference between Matterhorn and K2.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <h3>Select image to upload:</h3>
+            <input type="file" name="file">
+            <input type="submit" value="Upload Image">
+        </form>
+
+        <img id="preview_img" width="200" />
+
+        <h3>I think this is the {{ label }}.</h3>
+        <p>I'm about {{ confidence }} % sure.</p>
+    </div>
+
+    <div class="footer"></div>
+
+    <script>
+        var load_file = function (event) {
+            var $img = document.getElementById("preview_img");
+            $img.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+
+    <script src="{{ url_for('static', path='/js/footer.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+var footer_content = "Design based on <a href=\"https://themes.gohugo.io/hugo-theme-terminal/\">terminal</a> by <a href=\"https://radoslawkoziel.pl/\">panr</a>."
+document.getElementsByClassName("footer")[0].innerHTML = footer_content
